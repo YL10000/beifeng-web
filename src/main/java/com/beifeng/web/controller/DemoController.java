@@ -31,7 +31,7 @@ import com.beifeng.web.conmon.log.MethodLog;
 /**
  * DemoController
  *	
- * @Description DemoAction 
+ * @Description DemoAction 分支
  * @author yanglin
  * @version 1.0,2017年8月24日
  * @see
