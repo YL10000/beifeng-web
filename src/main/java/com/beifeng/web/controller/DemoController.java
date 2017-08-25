@@ -47,6 +47,7 @@ public class DemoController {
     @MethodLog(remark = "到demo数据列表页")
     @RequestMapping("/list")
     public String selectAllUser(HttpServletRequest request,Model model,OpLog opLog) {
+        System.out.println("分支");
         return "demo/demo_list";
     }
     
