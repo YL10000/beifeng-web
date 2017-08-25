@@ -18,14 +18,14 @@
         return "demo/demo_list";
     }
 >数据库sql
->>demo表
+>>demo表<br>
       CREATE TABLE `demo` (
           `id` int(10) NOT NULL auto_increment,
           `name` varchar(20) collate utf8_bin default NULL,
           `age` int(10) default NULL,
           PRIMARY KEY  (`id`)
-      ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
->>操作日志表
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin<br>
+>>操作日志表<br>
       CREATE TABLE `sys_op_log` (
           `id` int(10) NOT NULL auto_increment,
           `remark` varchar(100) collate utf8_bin default NULL COMMENT '日志备注',
@@ -35,5 +35,5 @@
           `exception` varchar(256) collate utf8_bin default NULL,
           `create_time` datetime default NULL COMMENT '创建时间',
           PRIMARY KEY  (`id`)
-      ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin<br>
 
