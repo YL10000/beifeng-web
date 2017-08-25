@@ -1,8 +1,8 @@
 # beifeng-web
 使用spring mvc + mybatis的web项目
 
->该项目使用spring注解实现了mvc模式
->后台使用mybatis操作数据库
+* 该项目使用spring注解实现了mvc模式
+* 后台使用mybatis操作数据库
     如果要实现数据库的增删改查的实体，需要继承BaseModel,对用的dao继承IBaseDao，会自动生成常用的增删改查方法，不需要额外书写xml
     对于垮实体的连表查询，使用com.beifeng.web.conmon.persistence.support.QueryCondition参数
     在QueryCondition中添加pageInfo信息，可以进行自动分页查询，sql语句中不需要进行分页处理
