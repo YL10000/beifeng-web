@@ -9,7 +9,7 @@
     PageInfo pageInfo = new PageInfo(total, Integer.parseInt(pageSize));
     pageInfo.setPage(Integer.parseInt(currentPage));
     condition.setPageInfo(pageInfo);
->操作日志注解配置
+* 操作日志注解配置
     在要添加日志的方法上添加@MethodLog注解
     在方法中添加OpLog opLog参数会自动注入进去
     @MethodLog(remark = "到demo数据列表页")
@@ -17,15 +17,15 @@
     public String selectAllUser(HttpServletRequest request,Model model,OpLog opLog) {
         return "demo/demo_list";
     }
->数据库sql
->>demo表<br>
+* 数据库sql
+** demo表<br>
       CREATE TABLE `demo` (
           `id` int(10) NOT NULL auto_increment,
           `name` varchar(20) collate utf8_bin default NULL,
           `age` int(10) default NULL,
           PRIMARY KEY  (`id`)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin<br>
->>操作日志表<br>
+** 操作日志表<br>
       CREATE TABLE `sys_op_log` (
           `id` int(10) NOT NULL auto_increment,
           `remark` varchar(100) collate utf8_bin default NULL COMMENT '日志备注',
