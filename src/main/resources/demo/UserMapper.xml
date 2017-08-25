@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ibeifeng.dao.demo.IUserDao">
+
+	<!-- <resultMap type="com.ibeifeng.modal.demo.User" id="userMap">
+		<id property="userId" column="id"/>
+		<result property="userName" column="account"/>
+		<result property="userPassword" column="passwd"/>
+	</resultMap> -->
+
+
+	<!-- 查询所有员工并分页 -->
+	<select id="seletAllUsers" resultType="map" parameterType="com.ibeifeng.modal.common.ParamsMap">
+		select * from
+		my_user order by
+		id desc limit #{pageInfo.firstItemPos},#{pageInfo.maxItemNum}
+	</select>
+	
+	<select id="seletCountAllUsers" resultType="long" parameterType="com.ibeifeng.modal.common.ParamsMap">
+		select count(1) from my_user
+		
+	</select>
+
+	<!-- 创建员工并返回ID -->
+	<!-- <insert id="createEmployee" parameterType="Employee">
+		insert into
+		basic_demo_employee(firstName, laseName, age, address)
+		values(#{firstName},#{laseName},#{age},#{address})
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="id">
+			select last_insert_id() as id
+		</selectKey>
+	</insert> -->
+
+</mapper>

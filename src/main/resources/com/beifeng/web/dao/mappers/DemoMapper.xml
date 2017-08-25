@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beifeng.web.dao.IDemoDao">
+
+	<!-- 查询所有员工并分页 -->
+	<select id="queryDemosByCondition" resultType="map" parameterType="com.beifeng.web.conmon.persistence.support.QueryCondition">
+		select * from
+		demo order by
+		id desc
+	</select>
+	
+	<select id="getDemoCountbByCondition" resultType="java.lang.Integer" parameterType="com.beifeng.web.conmon.persistence.support.QueryCondition">
+		select count(1) from demo
+	</select>
+
+	<!-- 创建员工并返回ID -->
+	<!-- <insert id="createEmployee" parameterType="Employee">
+		insert into
+		basic_demo_employee(firstName, laseName, age, address)
+		values(#{firstName},#{laseName},#{age},#{address})
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="id">
+			select last_insert_id() as id
+		</selectKey>
+	</insert> -->
+
+</mapper>
